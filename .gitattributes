@@ -1,6 +1,6 @@
 # GitHub language detection
-*.py linguist-detectable=true
-*.ipynb linguist-detectable=true
+*.py linguist-detectable=true linguist-vendored=false
+*.ipynb linguist-detectable=true linguist-vendored=false
 *.html linguist-detectable=true
 *.css linguist-detectable=true
 *.js linguist-detectable=true
@@ -8,6 +8,10 @@
 # Mark Jupyter notebooks as Python
 *.ipynb linguist-language=Python
 
-# Exclude certain files from language stats
+# Include Python files explicitly
+flask/*.py linguist-language=Python
+Training/*.ipynb linguist-language=Python
+
+# Exclude documentation from language stats
 *.md linguist-documentation=true
-GITHUB_PUSH_GUIDE.md linguist-documentation=true
+GITHUB_SETUP_COMPLETE.md linguist-documentation=true
