@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Risk Assessment - Data Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>📊 Flood Risk Assessment</h2>
+            <p>Enter your weather data for accurate flood prediction</p>
+        </div>
+
+        <div class="form-content">
+            <form action="/data_predict" method="POST" onsubmit="return validateForm()">
+                
+                <!-- Weather Section -->
+                <div class="form-section">
+                    <div class="form-section-title">🌡️ Weather Conditions</div>
+                    
+                    <div class="form-group">
+                        <label for="temp">Temperature (°C)</label>
+                        <input type="number" id="temp" name="temp" placeholder="e.g., 28.5" step="0.1" min="-50" max="60" required>
+                        <div class="hint">Average daily temperature</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="humidity">Humidity (%)</label>
+                        <input type="number" id="humidity" name="humidity" placeholder="e.g., 75" step="0.1" min="0" max="100" required>
+                        <div class="hint">Relative humidity percentage</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cloud_cover">Cloud Cover (%)</label>
+                        <input type="number" id="cloud_cover" name="cloud_cover" placeholder="e.g., 40" step="0.1" min="0" max="100" required>
+                        <div class="hint">Sky coverage by clouds</div>
+                    </div>
+                </div>
+
+                <!-- Rainfall Section -->
+                <div class="form-section">
+                    <div class="form-section-title">🌧️ Rainfall Data</div>
+                    
+                    <div class="form-group">
+                        <label for="annual">Annual Rainfall (mm)</label>
+                        <input type="number" id="annual" name="annual" placeholder="e.g., 3248.6" step="0.1" min="0" max="20000" required>
+                        <div class="hint">Total annual rainfall accumulation</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jan_feb">Jan-Feb Rainfall (mm)</label>
+                        <input type="number" id="jan_feb" name="jan_feb" placeholder="e.g., 73.4" step="0.1" min="0" max="5000" required>
+                        <div class="hint">Winter season rainfall</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mar_may">Mar-May Rainfall (mm)</label>
+                        <input type="number" id="mar_may" name="mar_may" placeholder="e.g., 386.2" step="0.1" min="0" max="5000" required>
+                        <div class="hint">Spring season rainfall</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jun_sep">Jun-Sep Rainfall (mm)</label>
+                        <input type="number" id="jun_sep" name="jun_sep" placeholder="e.g., 2122.8" step="0.1" min="0" max="10000" required>
+                        <div class="hint">Monsoon season rainfall (peak)</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="oct_dec">Oct-Dec Rainfall (mm)</label>
+                        <input type="number" id="oct_dec" name="oct_dec" placeholder="e.g., 666.1" step="0.1" min="0" max="5000" required>
+                        <div class="hint">Post-monsoon season rainfall</div>
+                    </div>
+                </div>
+
+                <!-- Additional Section -->
+                <div class="form-section">
+                    <div class="form-section-title">📈 Additional Metrics</div>
+                    
+                    <div class="form-group">
+                        <label for="avgjune">Average June Rainfall (mm)</label>
+                        <input type="number" id="avgjune" name="avgjune" placeholder="e.g., 274.87" step="0.1" min="0" max="2000" required>
+                        <div class="hint">Average daily rainfall in June</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sub">Subsequent Rainfall (mm)</label>
+                        <input type="number" id="sub" name="sub" placeholder="e.g., 649.9" step="0.1" min="0" max="5000" required>
+                        <div class="hint">Expected subsequent rainfall</div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">🔮 Generate Flood Prediction</button>
+            </form>
+        </div>
+
+        <div class="form-footer">
+            <a href="/" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const inputs = document.querySelectorAll('input[required]');
+            for (let input of inputs) {
+                if (!input.value) {
+                    alert('Please fill in all fields');
+                    input.focus();
+                    return false;
+                }
+                if (isNaN(input.value)) {
+                    alert('Please enter valid numbers');
+                    input.focus();
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Real-time validation feedback
+        document.querySelectorAll('input[type="number"]').forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.value) {
+                    this.style.borderColor = '#00b894';
+                } else {
+                    this.style.borderColor = '#e0e0e0';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

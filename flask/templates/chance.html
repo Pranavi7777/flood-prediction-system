@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Risk Assessment Result - Alert</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <div class="result-header result-risk">
+            <div class="result-icon">⚠️</div>
+            <h1>{{ prediction }}</h1>
+            <p class="result-message">Based on the weather data you provided, your area shows elevated risk of severe flooding.</p>
+            
+            <div class="result-details">
+                <h3>Recommended Actions:</h3>
+                <ul>
+                    <li>Issue evacuation alerts if necessary</li>
+                    <li>Prepare emergency supplies and evacuation plans</li>
+                    <li>Monitor water levels and weather forecasts closely</li>
+                    <li>Stay updated with local emergency alerts</li>
+                    <li>Keep communication channels open with authorities</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="result-footer">
+            <a href="/">← Try Another Prediction</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 National Flood Prediction System | Please Take Precautions Immediately</p>
+    </div>
+</body>
+</html>

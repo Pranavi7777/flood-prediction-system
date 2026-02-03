@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Risk Assessment Result - Safe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <div class="result-header result-no-risk">
+            <div class="result-icon">✅</div>
+            <h1>{{ prediction }}</h1>
+            <p class="result-message">Based on the weather data you provided, your area shows a low probability of severe flooding.</p>
+            
+            <div class="result-details">
+                <h3>What This Means:</h3>
+                <ul>
+                    <li>Current weather conditions are stable</li>
+                    <li>Rainfall patterns are within normal ranges</li>
+                    <li>No immediate flood threats detected</li>
+                    <li>Continue to monitor weather updates regularly</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="result-footer">
+            <a href="/">← Try Another Prediction</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 National Flood Prediction System | Stay Safe, Stay Informed</p>
+    </div>
+</body>
+</html>

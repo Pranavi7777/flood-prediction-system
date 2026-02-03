@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #00ff00;
+    font-size: 28px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+/* Background section */
+.hero {
+    background-image: url("/static/images/flood.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 40px;
+    color: white;
+}
+
+.hero h2 {
+    color: #00ff00;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    width: 60%;
+    line-height: 1.6;
+}
+
+/* Form section */
+.form-container {
+    background-color: #e8e4dc;
+    padding: 50px;
+    min-height: 400px;
+}
+
+.form-box {
+    width: 600px;
+    margin: auto;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.form-box button {
+    margin-top: 25px;
+    padding: 10px 25px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-box button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Result pages */
+.result {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.result h1 {
+    font-size: 32px;
+    color: red;
+}
