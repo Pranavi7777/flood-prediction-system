@@ -1,0 +1,13 @@
+# GitHub language detection
+*.py linguist-detectable=true
+*.ipynb linguist-detectable=true
+*.html linguist-detectable=true
+*.css linguist-detectable=true
+*.js linguist-detectable=true
+
+# Mark Jupyter notebooks as Python
+*.ipynb linguist-language=Python
+
+# Exclude certain files from language stats
+*.md linguist-documentation=true
+GITHUB_PUSH_GUIDE.md linguist-documentation=true
