@@ -37,9 +37,9 @@ instance/
 .DS_Store
 Thumbs.db
 
-# Model files (too large for GitHub)
-*.save
+# Model files - Now included in repo
+# *.save
 
-# Dataset
-Dataset/*.xlsx
-Dataset/*.csv
+# Dataset - Now included in repo
+# Dataset/*.xlsx
+# Dataset/*.csv
