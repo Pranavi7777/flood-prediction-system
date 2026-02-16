@@ -122,8 +122,7 @@ flood-prediction-system/
 
 ## 🌐 LIVE APPLICATION
 
-**Application URL:** https://flood-prediction-system-1.onrender.com
-
+**Application URL:** 
 ### Features Available:
 - ✅ Home page with project overview
 - ✅ Interactive prediction form
@@ -132,7 +131,7 @@ flood-prediction-system/
 - ✅ Demo mode (works without ML model files)
 
 ### How to Use:
-1. Visit: https://flood-prediction-system-1.onrender.com
+1. Visit: https://flood-prediction-systems.onrender.com/
 2. Click "Start Prediction"
 3. Enter weather parameters:
    - Temperature (°C)
@@ -218,7 +217,7 @@ Werkzeug>=3.0.0
 ## 🔗 PROJECT LINKS & REFERENCES
 
 ### Live Application
-- **Main App:** https://flood-prediction-system-1.onrender.com
+- **Main App:** https://flood-prediction-systems.onrender.com/
 - **Status:** 🟢 Live and accessible 24/7
 
 ### GitHub Repository
@@ -288,7 +287,7 @@ Werkzeug>=3.0.0
 | Deliverable | Status | Link |
 |---|---|---|
 | GitHub Repository | ✅ Complete | https://github.com/Pranavi7777/flood-prediction-system |
-| Live Application | ✅ Complete | https://flood-prediction-system-1.onrender.com |
+| Live Application | ✅ Complete | https://flood-prediction-system.onrender.com/
 | Source Code | ✅ Uploaded | All files in GitHub |
 | Documentation | ✅ Complete | README.md, DEPLOYMENT_GUIDE.md |
 | Model Training | ✅ Complete | Training/Floods.ipynb |

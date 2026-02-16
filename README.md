@@ -2,7 +2,7 @@
 
 An advanced AI-powered flood risk prediction system using machine learning to analyze weather patterns and predict severe flooding probability.
 
-![Flood Prediction System](https://img.shields.io/badge/Accuracy-98.2%25-success)
+![Accuracy](https://img.shields.io/badge/Accuracy-98.2%25-success)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![Flask](https://img.shields.io/badge/Flask-2.0+-green)
 ![ML](https://img.shields.io/badge/ML-XGBoost-orange)
@@ -10,17 +10,26 @@ An advanced AI-powered flood risk prediction system using machine learning to an
 ## 🎯 Features
 
 - **Data Analysis**: Analyzes 10 critical weather parameters including temperature, humidity, and seasonal rainfall patterns
-- **AI Powered**: Uses XGBoost machine learning algorithm trained on extensive historical flood data
-- **Real-Time Predictions**: Get instant flood risk assessments based on current weather data
-- **High Accuracy**: Achieves 98.2% accuracy with optimized precision and recall metrics
-- **User-Friendly Interface**: Clean, responsive web interface built with Flask
+- **AI Powered**: Uses XGBoost machine learning algorithm trained on historical flood data
+- **Real-Time Predictions**: Instant flood risk assessment from user inputs
+- **High Accuracy**: Achieves 98.2% accuracy with optimized precision and recall
+- **User-Friendly Interface**: Clean, responsive web UI built with Flask
 
 ## 📊 Model Performance
 
 - **Accuracy**: 98.2%
-- **Training Data**: 115 historical records
+- **Training Data**: 115 records
 - **Key Factors**: 10 weather parameters
-- **Algorithm**: XGBoost Classifier  
+- **Algorithm**: XGBoost Classifier
+
+## 🌍 National-Level Scope & Impact
+
+This system is structured to support national-scale flood preparedness by standardizing inputs, predictions, and outputs that can be rolled out across regions.
+
+- **National Relevance**: Floods affect multiple states; a unified model helps compare risk patterns consistently
+- **Scalable Design**: The same pipeline can absorb regional datasets and grow into a nationwide model
+- **Public Safety Use**: Outputs can feed dashboards, alerts, and local response planning
+- **Policy Alignment**: Supports data-driven planning and periodic model updates for long-term resilience
 
 ## System Architecture
 
@@ -43,10 +52,11 @@ An advanced AI-powered flood risk prediction system using machine learning to an
 - **Algorithm**: XGBoost Classifier
 
 ## Project Structure
+
 ```
-intern/
+flood_prediction system/
 ├── Dataset/
-│   └── flood_dataset.xlsx          # Training dataset
+│   └── flood dataset.xlsx          # Training dataset
 ├── Training/
 │   └── Floods.ipynb               # ML model training notebook
 ├── flask/
@@ -60,34 +70,44 @@ intern/
 │   │   └── nochance.html          # Low risk result
 │   └── static/
 │       └── css/
-│           └── styles.css         # Professional styling
-└── README.md                       # This file
+│           └── styles.css         # Styling
+├── screenshots/                    # Project screenshots
+│   ├── home-page.png
+│   ├── prediction-form.png
+│   ├── flood-risk-result.png
+│   ├── no-risk-result.png
+│   ├── github-repo.png
+│   └── model-accuracy.png
+├── demo/                           # Demo video
+│   └── flood-prediction-demo.mp4
+├── app.py                          # Root app entry
+├── requirements.txt                # Dependencies
+└── README.md                        # This file
 ```
+
+### Structure Explained
+
+- **Dataset/**: Source data used for model training
+- **Training/**: Notebook for EDA, training, evaluation, and saving artifacts
+- **flask/**: Web app, templates, static assets, and trained model files
+- **app.py**: Root-level entry point used for deployment
+- **requirements.txt**: Dependencies for local or cloud setup
+- **README.md**: Documentation and submission details
 
 ## Installation & Setup
 
 ### Prerequisites
 - Python 3.8+
 - pip (Python package manager)
-- Flask
-- scikit-learn
-- xgboost
-- joblib
-- pandas
-- numpy
 
 ### Step 1: Install Dependencies
 ```bash
-pip install flask scikit-learn xgboost joblib pandas numpy matplotlib seaborn openpyxl
+pip install -r requirements.txt
 ```
 
-### Step 2: Navigate to Flask Directory
+### Step 2: Run the Application
 ```bash
-cd c:\Users\My world\Documents\intern\flask
-```
-
-### Step 3: Run the Application
-```bash
+cd flask
 python app.py
 ```
 
@@ -95,21 +115,17 @@ The application will start on: **http://127.0.0.1:5000**
 
 ## How to Use
 
-### 1. **Home Page**
-- Displays system information and features
-- Shows accuracy metrics and statistics
-- Click "Start Prediction" button
+1. **Home Page**
+   - View project information and features
+   - Click "Start Prediction"
 
-### 2. **Data Entry Form**
-- Fill in all 10 weather parameters
-- Form includes helpful hints for each field
-- Real-time validation with color feedback
-- Range validation to prevent invalid inputs
+2. **Data Entry Form**
+   - Enter all 10 weather parameters
+   - Submit for prediction
 
-### 3. **Prediction Results**
-- **Low Risk Page**: Green interface with reassuring message
-- **High Risk Page**: Red interface with emergency recommendations
-- Option to perform another prediction
+3. **Prediction Results**
+   - **Low Risk**: Reassuring message
+   - **High Risk**: Warning message
 
 ## Sample Input Values
 
@@ -142,91 +158,71 @@ The application will start on: **http://127.0.0.1:5000**
 To retrain the model with updated data:
 
 1. Open `Training/Floods.ipynb` in Jupyter Notebook
-2. Update the dataset path if using new data
-3. Run all cells sequentially
-4. The trained model will be saved to `floods.save`
+2. Run all cells sequentially
+3. Model saves to `flask/floods.save` and scaler to `flask/transform.save`
 
-## Technical Details
+## 📸 Screenshots
 
-### Model Pipeline
-1. **Data Loading** - Read from Excel dataset
-2. **Feature Selection** - 10 critical weather parameters
-3. **Data Splitting** - 75% training, 25% testing
-4. **Standardization** - StandardScaler normalization
-5. **Model Training** - XGBoost with optimized parameters
-6. **Evaluation** - Accuracy, Precision, Recall metrics
+### Home Page - System Overview
+![Home Page](screenshots/home-page.png)
+*Professional landing page displaying system features, accuracy metrics, and statistics*
 
-### Feature Engineering
-- StandardScaler for numerical normalization
-- No missing values (data cleaned)
-- All features on comparable scales
+### Prediction Form - Risk Assessment Interface
+![Prediction Form](screenshots/prediction-form.png)
+*Interactive form for entering 10 weather parameters with clean, user-friendly design*
 
-## UI/UX Features
+### Flood Risk Result - High Risk Detection
+![Flood Risk](screenshots/flood-risk-result.png)
+*Clear warning display with recommended actions and emergency guidance*
 
-### Responsive Design
-- ✅ Mobile-friendly layout
-- ✅ Tablet optimized
-- ✅ Desktop professional interface
+### No Risk Result - Safe Conditions
+![No Risk](screenshots/no-risk-result.png)
+*Reassuring message when flood risk is low*
 
-### Animations & Transitions
-- Smooth slide-up animations on page load
-- Button hover effects with shadow enhancement
-- Form field focus states with visual feedback
-- Gradient backgrounds for modern look
+### GitHub Repository
+![GitHub Repo](screenshots/github-repo.png)
+*Project repository showing languages used and file structure*
 
-### Accessibility
-- Semantic HTML structure
-- Proper label associations
-- ARIA-ready structure
-- Clear visual hierarchy
+### Model Training Results
+![Model Accuracy](screenshots/model-accuracy.png)
+*Jupyter notebook showing 98.2% accuracy achievement*
 
-## Color Scheme
-- **Primary**: #0066cc (Blue)
-- **Secondary**: #00a3e0 (Cyan)
-- **Success**: #00b894 (Green)
-- **Danger**: #d63031 (Red)
-- **Background**: Gradient purple to pink
+### Screenshots Folder Structure
+```
+screenshots/
+├── home-page.png              # Landing page
+├── prediction-form.png        # Input form
+├── flood-risk-result.png      # High risk output
+├── no-risk-result.png         # Low risk output  
+├── github-repo.png            # Repository page
+└── model-accuracy.png         # Training results
+```
 
-## Browser Support
-- Chrome (Latest)
-- Firefox (Latest)
-- Safari (Latest)
-- Edge (Latest)
+## 🎬 Demo Video
 
-## Troubleshooting
+### 📺 Watch Full Demonstration
+[![Watch Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?logo=youtube&style=for-the-badge)](demo/flood-prediction-demo.mp4)
 
-### Issue: "Model not found"
-**Solution**: Ensure `floods.save` and `transform.save` are in the flask directory
+**Video demonstrates:**
+- ✅ Application navigation
+- ✅ Entering weather parameters
+- ✅ Real-time prediction process
+- ✅ Risk assessment results
+- ✅ User interface features
 
-### Issue: "Template not found"
-**Solution**: Ensure `templates/` folder exists with all HTML files
+**Demo Video Location:** `demo/flood-prediction-demo.mp4`
 
-### Issue: "CSS not loading"
-**Solution**: Verify `static/css/styles.css` exists and Flask path is correct
+> **Note:** For videos larger than 100MB, upload to YouTube and update the link above
 
-### Issue: Prediction errors
-**Solution**: Ensure all form fields are filled with valid numbers within range
+## Team Members
 
-## Future Enhancements
-- Real-time weather API integration
-- Geographic location-based predictions
-- Historical prediction tracking
-- Multi-region support
-- Mobile app version
-- SMS/Email alerts
-
-## Support & Documentation
-For issues or questions:
-1. Check the troubleshooting section
-2. Review the notebook for model details
-3. Verify all data formats match expected ranges
+- **Team ID**: LTVIP2026TMIDS39737
+- **Team Leader**: Sneha Bonthu
+- **Team Members**:
+  - Sai Pranavi Karumuri
+  - Raavi Gayatri Naga Teja Sri
+  - Pulagam Tulasi Rani
 
 ## License
+
 National Flood Prediction System v1.0
-
-## Credits
-Developed with Python, Flask, scikit-learn, and XGBoost
-
----
-
-**🎯 Ready to predict floods? Run `python app.py` and visit http://127.0.0.1:5000**
