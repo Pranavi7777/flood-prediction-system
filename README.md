@@ -189,9 +189,11 @@ To retrain the model with updated data:
 
 ### 📺 Watch Full Demonstration
 
-**Video Location:** `demo/video/demo.mp4`
+[**▶️ Click here to view the demo video**](demo/video/demo.mp4)
 
-> **Note:** Once pushed to GitHub, the video will be viewable directly in the repository
+https://github.com/Pranavi7777/flood-prediction-system/assets/176794559/demo-video-placeholder
+
+> **Video Location:** `demo/video/demo.mp4` (Hosted via Git LFS)
 
 **Video demonstrates:**
 - ✅ Application navigation
