@@ -4,14 +4,12 @@
 *.html linguist-detectable=true
 *.css linguist-detectable=true
 *.js linguist-detectable=true
-
 # Mark Jupyter notebooks as Python
 *.ipynb linguist-language=Python
-
 # Include Python files explicitly
 flask/*.py linguist-language=Python
 Training/*.ipynb linguist-language=Python
-
 # Exclude documentation from language stats
 *.md linguist-documentation=true
 GITHUB_SETUP_COMPLETE.md linguist-documentation=true
+demo/video/*.mp4 filter=lfs diff=lfs merge=lfs -text

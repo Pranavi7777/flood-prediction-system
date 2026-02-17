@@ -72,14 +72,17 @@ flood_prediction system/
 │       └── css/
 │           └── styles.css         # Styling
 ├── screenshots/                    # Project screenshots
-│   ├── home-page.png
-│   ├── prediction-form.png
-│   ├── flood-risk-result.png
-│   ├── no-risk-result.png
-│   ├── github-repo.png
-│   └── model-accuracy.png
+│   └── assets/
+│       └── photos/
+│           ├── home-page.png
+│           ├── prediction-form.png
+│           ├── flood-risk-result.png
+│           ├── no-risk-result.png
+│           ├── github-repo.png
+│           └── model-accuracy.png
 ├── demo/                           # Demo video
-│   └── flood-prediction-demo.mp4
+│   └── video/
+│       └── demo.mp4
 ├── app.py                          # Root app entry
 ├── requirements.txt                # Dependencies
 └── README.md                        # This file
@@ -164,44 +167,36 @@ To retrain the model with updated data:
 ## 📸 Screenshots
 
 ### Home Page - System Overview
-![Home Page](screenshots/home-page.png)
+![Home Page](screenshots/assets/photos/home-page.png)
 *Professional landing page displaying system features, accuracy metrics, and statistics*
 
 ### Prediction Form - Risk Assessment Interface
-![Prediction Form](screenshots/prediction-form.png)
+![Prediction Form](screenshots/assets/photos/prediction-form.png)
 *Interactive form for entering 10 weather parameters with clean, user-friendly design*
 
 ### Flood Risk Result - High Risk Detection
-![Flood Risk](screenshots/flood-risk-result.png)
+![Flood Risk](screenshots/assets/photos/flood-risk-result.png)
 *Clear warning display with recommended actions and emergency guidance*
 
 ### No Risk Result - Safe Conditions
-![No Risk](screenshots/no-risk-result.png)
+![No Risk](screenshots/assets/photos/no-risk-result.png)
 *Reassuring message when flood risk is low*
 
 ### GitHub Repository
-![GitHub Repo](screenshots/github-repo.png)
-*Project repository showing languages used and file structure*
+![GitHub Repository](screenshots/assets/photos/github-repo.png)
+*Project repository on GitHub*
 
 ### Model Training Results
-![Model Accuracy](screenshots/model-accuracy.png)
+![Model Accuracy](screenshots/assets/photos/model-accuracy.png)
 *Jupyter notebook showing 98.2% accuracy achievement*
-
-### Screenshots Folder Structure
-```
-screenshots/
-├── home-page.png              # Landing page
-├── prediction-form.png        # Input form
-├── flood-risk-result.png      # High risk output
-├── no-risk-result.png         # Low risk output  
-├── github-repo.png            # Repository page
-└── model-accuracy.png         # Training results
-```
 
 ## 🎬 Demo Video
 
 ### 📺 Watch Full Demonstration
-[![Watch Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?logo=youtube&style=for-the-badge)](demo/flood-prediction-demo.mp4)
+
+**Video Location:** `demo/video/demo.mp4`
+
+> **Note:** Once pushed to GitHub, the video will be viewable directly in the repository
 
 **Video demonstrates:**
 - ✅ Application navigation
@@ -209,10 +204,6 @@ screenshots/
 - ✅ Real-time prediction process
 - ✅ Risk assessment results
 - ✅ User interface features
-
-**Demo Video Location:** `demo/flood-prediction-demo.mp4`
-
-> **Note:** For videos larger than 100MB, upload to YouTube and update the link above
 
 ## Team Members
 
