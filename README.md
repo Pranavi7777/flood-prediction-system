@@ -74,11 +74,10 @@ flood_prediction system/
 ├── screenshots/                    # Project screenshots
 │   └── assets/
 │       └── photos/
-│           ├── home-page.png
-│           ├── prediction-form.png
-│           ├── flood-risk-result.png
-│           ├── no-risk-result.png
-│           ├── github-repo.png
+│           ├── homepage.png
+│           ├── prediction-page.png
+│           ├── high-risk.png
+│           ├── no-risk.png
 │           └── model-accuracy.png
 ├── demo/                           # Demo video
 │   └── video/
@@ -167,24 +166,20 @@ To retrain the model with updated data:
 ## 📸 Screenshots
 
 ### Home Page - System Overview
-![Home Page](screenshots/assets/photos/home-page.png)
+![Home Page](screenshots/assets/photos/homepage.png)
 *Professional landing page displaying system features, accuracy metrics, and statistics*
 
 ### Prediction Form - Risk Assessment Interface
-![Prediction Form](screenshots/assets/photos/prediction-form.png)
+![Prediction Form](screenshots/assets/photos/prediction-page.png)
 *Interactive form for entering 10 weather parameters with clean, user-friendly design*
 
 ### Flood Risk Result - High Risk Detection
-![Flood Risk](screenshots/assets/photos/flood-risk-result.png)
+![Flood Risk](screenshots/assets/photos/high-risk.png)
 *Clear warning display with recommended actions and emergency guidance*
 
 ### No Risk Result - Safe Conditions
-![No Risk](screenshots/assets/photos/no-risk-result.png)
+![No Risk](screenshots/assets/photos/no-risk.png)
 *Reassuring message when flood risk is low*
-
-### GitHub Repository
-![GitHub Repository](screenshots/assets/photos/github-repo.png)
-*Project repository on GitHub*
 
 ### Model Training Results
 ![Model Accuracy](screenshots/assets/photos/model-accuracy.png)
