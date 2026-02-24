@@ -202,14 +202,6 @@ https://github.com/Pranavi7777/flood-prediction-system/assets/176794559/demo-vid
 - ✅ Risk assessment results
 - ✅ User interface features
 
-## Team Members
-
-- **Team ID**: LTVIP2026TMIDS39737
-- **Team Leader**: Sneha Bonthu
-- **Team Members**:
-  - Sai Pranavi Karumuri
-  - Raavi Gayatri Naga Teja Sri
-  - Pulagam Tulasi Rani
 
 ## License
 
