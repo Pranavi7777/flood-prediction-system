@@ -206,3 +206,5 @@ https://github.com/Pranavi7777/flood-prediction-system/assets/176794559/demo-vid
 ## License
 
 National Flood Prediction System v1.0
+Created by: Sai Pranavi Karumuri  
+License: MIT
